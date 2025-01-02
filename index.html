@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Widget</title>
+</head>
+<body>
+    <div id="greeting"></div>
+
+    <script src="greetingWidget.js"></script>
+    <script>
+        const greetingDiv = document.getElementById("greeting");
+        greetingDiv.textContent = getGreeting();
+    </script>
+</body>
+</html>
