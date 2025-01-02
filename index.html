@@ -13,5 +13,19 @@
         const greetingDiv = document.getElementById("greeting");
         greetingDiv.textContent = getGreeting();
     </script>
+    <script>
+        const hours = new Date().getHours();
+        const body = document.body;
+    
+        if (hours >= 5 && hours < 12) {
+            body.className = "morning";
+        } else if (hours >= 12 && hours < 18) {
+            body.className = "afternoon";
+        } else if (hours >= 18 && hours < 22) {
+            body.className = "evening";
+        } else {
+            body.className = "night";
+        }
+    </script>    
 </body>
 </html>

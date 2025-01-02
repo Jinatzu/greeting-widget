@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease; /* Smooth transitions */
+}
+
+/* Morning: 5 AM to 11:59 AM */
+.morning {
+    background-color: #FFFAE5; /* Soft, warm yellow */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Afternoon: 12 PM to 5:59 PM */
+.afternoon {
+    background-color: #FFE4B5; /* Light peachy tone */
+    color: #333;
+}
+
+/* Evening: 6 PM to 9:59 PM */
+.evening {
+    background-color: #FFD1DC; /* Soft pink */
+    color: #333;
+}
+
+/* Night: 10 PM to 4:59 AM */
+.night {
+    background-color: #2F4F4F; /* Dark slate gray */
+    color: #FFF; /* Light text for contrast */
+}
