@@ -3,30 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Greeting Widget</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="greeting"></div>
-
+    <div class="sun"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="moon"></div>
+    <div class="stars"></div>
     <script src="greetingWidget.js"></script>
-    <script>
-        const greetingDiv = document.getElementById("greeting");
-        greetingDiv.textContent = getGreeting();
-    </script>
-    <script>
-        const hours = new Date().getHours();
-        const body = document.body;
-    
-        if (hours >= 5 && hours < 12) {
-            body.className = "morning";
-        } else if (hours >= 12 && hours < 18) {
-            body.className = "afternoon";
-        } else if (hours >= 18 && hours < 22) {
-            body.className = "evening";
-        } else {
-            body.className = "night";
-        }
-    </script>    
 </body>
 </html>

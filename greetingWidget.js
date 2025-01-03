@@ -1,17 +1,24 @@
-function getGreeting() {
-    const now = new Date();
-    const hours = now.getHours();
-    let greeting = "";
+const hours = new Date().getHours();
+let currentClass = document.body.className; // Preserve existing class
+let greetingText = "";
 
-    if (hours >= 5 && hours < 12) {
-        greeting = "Good morning";
-    } else if (hours >= 12 && hours < 18) {
-        greeting = "Good afternoon";
-    } else if (hours >= 18 && hours < 22) {
-        greeting = "Good evening";
-    } else {
-        greeting = "Good night";
-    }
-
-    return greeting;
+// Determine greeting and class
+if (hours >= 5 && hours < 12) {
+    greetingText = "Good morning!";
+    currentClass = "morning";
+} else if (hours >= 12 && hours < 16) {
+    greetingText = "Good afternoon!";
+    currentClass = "afternoon";
+} else if (hours >= 16 && hours < 20) {
+    greetingText = "Good evening!";
+    currentClass = "evening";
+} else {
+    greetingText = "Good night!";
+    currentClass = "night";
 }
+
+// Apply class and greeting
+document.body.className = currentClass; // Update the class on the body
+const greetingElement = document.createElement("h1");
+greetingElement.textContent = greetingText;
+document.body.appendChild(greetingElement);

@@ -1,29 +1,138 @@
+/* Default styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    transition: background-color 0.5s ease; /* Smooth transitions */
+    overflow: hidden;
 }
 
-/* Morning: 5 AM to 11:59 AM */
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+/* Morning */
 .morning {
-    background-color: #FFFAE5; /* Soft, warm yellow */
-    color: #333; /* Dark text for contrast */
+    background: linear-gradient(to bottom left, #293A4E, #375086, #869AD2);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/* Afternoon: 12 PM to 5:59 PM */
+.morning .sun {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background: radial-gradient(circle, #FFD3A9, #FCA590);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #DB7B8A;
+    animation: glow 5s ease-in-out infinite;
+}
+
+/* Afternoon */
 .afternoon {
-    background-color: #FFE4B5; /* Light peachy tone */
-    color: #333;
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF); /* Bright sky blue */
 }
 
-/* Evening: 6 PM to 9:59 PM */
+.afternoon .sun {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #FFD700;
+    animation: glow 5s ease-in-out infinite;
+}
+
+.afternoon .cloud {
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    background: #fff;
+    width: 200px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 30px 30px 0 10px #fff, -30px -30px 0 10px #fff;
+    animation: float 20s linear infinite;
+}
+
+/* Evening */
 .evening {
-    background-color: #FFD1DC; /* Soft pink */
-    color: #333;
+    background: linear-gradient(to bottom, #FFB6C1, #FF69B4); /* Soft pink twilight */
 }
 
-/* Night: 10 PM to 4:59 AM */
+.evening .cloud {
+    position: absolute;
+    top: 40%;
+    left: -10%;
+    background: #a67f7f;
+    width: 200px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 30px 30px 0 10px #6d5d5d, -30px -30px 0 10px #e9caca;
+    animation: float 25s linear infinite;
+}
+
+/* Night */
 .night {
-    background-color: #2F4F4F; /* Dark slate gray */
-    color: #FFF; /* Light text for contrast */
+    background: #2F4F4F; /* Deep slate gray for night sky */
+}
+
+.night .moon {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    background: radial-gradient(circle, #F5F3CE, #CCC);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #F5F3CE;
+}
+
+.night .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: twinkle 1.5s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(120%);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
 }
